@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        google.script.run.withSuccessHandler(options).getPAsForCoverSheet();
+        $("#generate").click(function(){
+          google.script.run.withSuccessHandler(google.script.host.close).newCoverSheet($(".paList :selected").text());
+        });
+        $("#cancel").click(function(){
+          google.script.host.close();
+        });
+      });
+      function options(arr) {
+        $(".paList").empty();
+        $(arr).each(function(i, el) {
+          $(".paList").append("<option>" + el + "</option>");
+        });
+      }
+    </script>
+  </head>
+  <body>
+  Choose the PA for whom you would like to generate a cover sheet:<br/><br/>
+    <select class="paList">
+    </select>
+    <br/><br/>
+    <div class="buttons" align="right">
+      <p>
+        <button class="generate" id="generate">Generate</button>
+        <button class="cancel" id="cancel">Cancel</button>
+      </p>
+    </div>
+  </body>
+</html>
+
+
