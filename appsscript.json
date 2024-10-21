@@ -1,16 +1,6 @@
 {
   "timeZone": "America/Chicago",
   "dependencies": {
-    "enabledAdvancedServices": [{
-      "userSymbol": "Gmail",
-      "serviceId": "gmail",
-      "version": "v1"
-    }],
-    "libraries": [{
-      "userSymbol": "SARLib",
-      "libraryId": "15SpJdJ7nnv7QDX1Y440M234huUGzIf04VFdHxrlajQrr7bsCj3XvbHcB",
-      "version": "135"
-    }]
   },
   "exceptionLogging": "STACKDRIVER",
   "runtimeVersion": "V8"
